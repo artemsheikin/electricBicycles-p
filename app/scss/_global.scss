@@ -1,0 +1,36 @@
+body {
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	color: $black;
+	font-family: Inter, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 25.6px;
+}
+
+.container {
+	max-width: 1310px;
+	margin: 0 auto;
+	padding: 0 15px;
+	position: relative;
+}
+
+.main {
+	flex-grow: 1;
+}
+
+.button {
+	display: flex;
+	width: 180px;
+	padding: 16px 80px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	border-radius: 10px;
+	background: $active;
+	color: $white;
+	font-family: Inter;
+	font-weight: 500;
+	line-height: 123%;
+}
