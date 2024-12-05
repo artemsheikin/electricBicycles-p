@@ -1,12 +1,13 @@
 body {
 	display: flex;
 	flex-direction: column;
-	background-color: #fff;
+	background-color: $bg;
 	color: $black;
 	font-family: Inter, sans-serif;
 	font-size: 16px;
 	font-weight: 400;
-	line-height: 25.6px;
+	line-height: 160%;
+	color: $white;
 }
 
 .container {
