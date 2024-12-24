@@ -1,10 +1,21 @@
-<!-- prettier-ignore  -->
 @include('./include/_head.html',{ 'title': 'Электро велосипеды по лучшей цене | Главная страница ', })
 
-@include('./components/_header.html')
+<body>
+  @include('./components/_header.html')
 
-<main class="main">
-  @include('./index/_top-header.html')
-</main>
+  <main class="main">
+    @include('./index/_top-header.html')
+    @include('./index/_partners.html')
+    @include('./components/products/_new-products.html')
+    @include('./components/products/_catalog.html')
+    @include('./components/products/_presentation.html')
+    @include('./components/products/_best.html')
+    @include('./components/products/_mountain.html')
+    @include('./components/products/_advantages.html')
+    @include('./components/products/_equipment.html')
+    @include('./components/products/_reviews.html')
+    @include('./components/products/_map.html')
+  </main>
 
-@include('./components/_footer.html') @include('./include/_footer-scripts.html')
+  @include('./components/_footer.html') @include('./include/_footer-scripts.html')
+</body>

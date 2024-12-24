@@ -1,0 +1,119 @@
+.new-products {
+	background-color: #f8f8f8;
+	padding: 80px 0;
+	&__title {
+		color: $bg;
+		font-family: 'BebasNeue';
+		font-size: 64px;
+		line-height: 123%;
+		margin-bottom: 80px;
+	}
+}
+
+.product {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	justify-content: space-between;
+	margin-bottom: 30px;
+	min-height: 506px;
+	grid-row-gap: 106px;
+	padding: 20px;
+	&__item {
+		position: relative;
+		border-radius: 10px;
+		padding: 18px;
+		background-color: $white;
+		width: 380px;
+		height: 420px;
+		position: relative;
+		margin-bottom: 80px;
+		transition: all 0.3s;
+		a {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: 0;
+		}
+	}
+	&__flag-element {
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-radius: 10px 0px 10px 0px;
+	}
+	&__status {
+		position: absolute;
+		top: 16px;
+		right: 16px;
+		color: #f53a20;
+	}
+	&__true {
+		color: #4d932c;
+	}
+	&__img {
+		margin-bottom: 16px;
+	}
+	&__text {
+		overflow: hidden;
+		color: $bg;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		font-size: 18px;
+		font-weight: 300;
+		margin-bottom: 24px;
+	}
+	&__prise {
+		color: #777;
+		font-weight: 500;
+		line-height: 123%;
+	}
+	&__link::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	&__inner {
+		text-align: center;
+	}
+	&__inner-btn {
+		width: 380px;
+		padding: 18px;
+		background: white;
+		height: 125px;
+		opacity: 0;
+		visibility: hidden;
+		margin-left: -18px;
+		border-radius: 0px 0px 10px 10px;
+		transition: all 0.3s;
+	}
+	&__else {
+		text-align: center;
+		color: #777;
+		font-size: 12px;
+		font-weight: 400;
+		text-transform: uppercase;
+		transition: color 0.3s;
+		&:hover {
+			color: red;
+		}
+	}
+	&__btn {
+		margin-top: 33px;
+		width: 100%;
+		transition: all 0.5s;
+		z-index: 10;
+		position: relative;
+	}
+}
+
+.product__item:hover .product__inner-btn {
+	opacity: 1; /* Показываем кнопку только при наведении на родительский элемент */
+	visibility: inherit;
+}
+/* .product__item:hover {
+	transform: translateY(10px);
+	height: 506px;
+	z-index: 10;
+} */

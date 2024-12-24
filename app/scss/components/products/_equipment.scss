@@ -1,0 +1,102 @@
+.equipment {
+	padding: 80px 0;
+	background-color: #f8f8f8;
+	&__title {
+		color: $bg;
+		font-family: 'BebasNeue';
+		font-size: 64px;
+		font-weight: 400;
+		line-height: 123%;
+		margin-bottom: 80px;
+	}
+	&__inner {
+		text-align: center;
+	}
+	&__link {
+		color: #777777;
+		font-size: 12px;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+}
+
+.equipment-swiper {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	margin-bottom: 48px;
+	&__slide {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background-color: $white;
+		padding: 18px 16px;
+		height: 443px;
+		width: 368px; /* Установлена фиксированная ширина для слайда */
+		box-sizing: border-box; /* Учет padding */
+		flex-shrink: 0; /* Для предотвращения сжатия слайда */
+	}
+	&__img {
+		width: 100%; /* Ширина изображения подгоняется под слайд */
+		height: auto; /* Сохранение пропорций */
+		object-fit: cover; /* Обеспечивает обрезку по контейнеру */
+	}
+	&__text {
+		color: $bg;
+		font-family: Inter;
+		font-size: 18px;
+		width: 100%; /* Ширина текста адаптирована под контейнер */
+	}
+	&__new-prise {
+		color: #777;
+		font-weight: 500;
+		line-height: 123%;
+		margin-right: 8px;
+	}
+	&__old-prise {
+		color: #777;
+		font-weight: 500;
+		line-height: 123%;
+		color: #b3b3b3;
+		font-size: 12px;
+		text-decoration-line: line-through;
+	}
+	&__button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $bg;
+		width: 43px;
+		height: 43px;
+		border-radius: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(
+			-50%
+		); /* Исправлен offset для корректного позиционирования */
+		z-index: 13;
+		cursor: pointer;
+	}
+	&__button-next {
+		right: 15px;
+	}
+	&__button-prev {
+		left: 15px;
+	}
+	&__arrow-svg {
+		color: $white;
+		width: 14px;
+		height: 24px;
+	}
+	.swiper-button-disabled {
+		background-color: $white;
+		.equipment-swiper__arrow-svg {
+			color: $bg;
+		}
+	}
+}
+
+.swiper-wrapper {
+	display: flex;
+	transition: transform 0.3s ease-in-out;
+}

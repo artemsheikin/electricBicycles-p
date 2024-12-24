@@ -1,0 +1,766 @@
+/* Медиазапросы и стили для различных экранов */
+
+/* Стиль для экрана до 1900px */
+@media (max-width: 1900px) {
+	.best__inner {
+		transform: translateY(0);
+	}
+	.advantages__container {
+		max-width: 1310px;
+		margin: 0 auto;
+		padding: 0 15px;
+	}
+	.advantages__list {
+		gap: 18px;
+		margin-right: 0;
+	}
+	.advantages__img {
+		max-width: 650px;
+	}
+	.advantages__img--right {
+		display: none;
+	}
+	.advantages__item {
+	}
+	.advantages__heading {
+	}
+}
+
+/* Стиль для экрана до 1400px */
+@media (max-width: 1400px) {
+	/* Ссылки в меню при наведении */
+	.header__menu-link:hover,
+	.header-dropdown__link:hover {
+		color: inherit;
+	}
+
+	/* Выравнивание поисковой строки */
+	.search-container {
+		right: 50%;
+		transform: translateX(50%);
+	}
+
+	/* Скрываем меню и заголовок при маленьких экранах */
+	.header__menu,
+	.menu__box-title {
+		display: none;
+	}
+
+	/* Логотип, скрываем его на больших экранах */
+	.logo--hidden {
+		display: block;
+		color: $bg;
+		margin-bottom: 48px;
+	}
+
+	/* Меню при активном состоянии */
+	.header {
+		&__menu--active {
+			display: flex;
+			flex-direction: column;
+		}
+
+		/* Элементы меню */
+		&__menu-item {
+			padding: 15px;
+			margin-bottom: 8px;
+			color: $bg;
+			font-size: 18px;
+			font-weight: 500;
+			border-radius: 10px;
+			background: #f8f8f8;
+			position: relative;
+			cursor: pointer; /* Курсор показывающий, что элемент кликабелен */
+
+			/* Убираем отступы для последнего элемента */
+			&:not(:last-child) {
+				margin-right: 0;
+			}
+
+			/* Активный элемент меню */
+			&.header__menu-item--active {
+				background-color: orange;
+				color: $white;
+			}
+		}
+
+		/* Стиль для SVG иконки в меню */
+		&__menu-svg {
+			position: absolute;
+			width: 24px;
+			height: 15px;
+			right: 16px;
+			top: 50%;
+			transform: translateY(-50%);
+			transition: transform 0.3s ease; /* Плавный переход для анимации */
+		}
+
+		/* Активное состояние для SVG (переворот) */
+		&__menu-svg--active {
+			transform: rotateX(180deg) translateY(50%);
+		}
+	}
+
+	/* Меню (список) */
+	.menu__box {
+		min-height: 130%;
+		top: -70px;
+	}
+
+	/* Стиль для элементов меню в списке */
+	.menu__item,
+	.menu__link {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	/* Скрытые элементы выпадающего меню */
+	.dropdown-list {
+		display: none;
+		flex-direction: column;
+		padding: 24px 15px;
+
+		/* Стилизуем каждый элемент выпадающего списка */
+		&__item {
+			padding-bottom: 24px;
+			color: #4c4c4c;
+			font-weight: 400;
+
+			/* Убираем отступ у последнего элемента */
+			&:last-child {
+				padding-bottom: 0;
+			}
+		}
+
+		/* Активный список, который показывается */
+		&.dropdown-list--active {
+			display: flex;
+		}
+	}
+
+	/* Топ-меню */
+	.top-header {
+		height: calc(100vh - 104px);
+
+		/* Контент внутри top-header */
+		&__content-inner {
+			max-width: 550px;
+		}
+
+		/* Выравнивание элементов внутри контейнера */
+		&__container {
+			flex-direction: column;
+		}
+	}
+
+	/* Стили для блоков в top-header */
+	.top-header__box {
+		font-size: 20px;
+		align-items: center;
+
+		/* Ссылка внутри top-header */
+		&-link {
+			opacity: 1;
+			text-align: center;
+		}
+
+		/* Текст в блоках */
+		&-text {
+			max-width: 100%;
+			width: 100%;
+			text-align: center;
+		}
+
+		/* Элементы внутри top-header */
+		&:nth-child(1) {
+			width: 100%;
+			align-items: center;
+			padding-right: 86px;
+		}
+
+		/* Стиль при наведении */
+		&:nth-child(1):hover {
+			height: 212px;
+			transform: translateY(0);
+			border-radius: 0;
+		}
+
+		/* Стиль для второго элемента */
+		&:nth-child(2) {
+			flex-basis: inherit;
+			align-items: center;
+		}
+
+		/* Стиль при наведении для второго элемента */
+		&:nth-child(2):hover {
+			height: 212px;
+			transform: translateY(0);
+			border-radius: 0;
+		}
+
+		/* Стиль для третьего элемента */
+		&:nth-child(3):hover {
+			height: 212px;
+			transform: translateY(0);
+			border-radius: 0;
+		}
+	}
+	.partners {
+		max-height: 250px;
+		margin-top: 637px;
+	}
+	.partners__swiper-slide img {
+		width: 200px;
+	}
+	.presentation {
+		&__item {
+			padding: 25px;
+			max-width: 300px;
+		}
+	}
+	.advantages__img {
+		max-width: 579px;
+	}
+	.reviews__container {
+		max-width: 1310px;
+		margin: 0 auto;
+		padding: 0 15px;
+		margin-bottom: 48px;
+	}
+}
+
+/* Медиа запрос для экранов до 1240px */
+@media (max-width: 1240px) {
+	.product {
+		grid-template-columns: repeat(2, auto);
+		justify-content: space-around;
+		grid-row-gap: 85px;
+		&__inner-btn {
+			opacity: 1;
+			visibility: inherit;
+		}
+	}
+
+	.product__item:hover .product__inner-btn {
+		opacity: 1; /* Показываем кнопку только при наведении на родительский элемент */
+		visibility: inherit;
+	}
+	.new-products__title {
+		text-align: center;
+	}
+	.presentation {
+		&__item {
+			margin-left: 70px;
+			padding: 25px;
+			max-width: 380px;
+			width: 100%;
+		}
+		&__img {
+			height: 98%;
+		}
+		#custom-player {
+			height: 400px;
+		}
+	}
+
+	.mountain-card {
+		padding-right: 16px;
+		&__item {
+			padding: 20px;
+			height: 218px;
+		}
+		&__text {
+			font-size: 14px;
+		}
+	}
+	.mountain-about {
+		max-width: 464px;
+	}
+	.mountain__wrapper {
+		font-size: 16px;
+	}
+	.advantages__container {
+		flex-wrap: wrap;
+	}
+	.advantages__img {
+		max-width: 95%;
+		margin: 0 auto;
+		margin-bottom: 50px;
+	}
+	.advantages__list {
+		max-width: 830px;
+	}
+	.advantages__item {
+		max-width: 406px;
+	}
+	.map {
+		&__marker {
+			width: 95px !important;
+		}
+	}
+	.footer-bottom__logo-box {
+		margin-right: 0;
+		max-width: 289px;
+	}
+	.footer-bottom__inner {
+		width: 80%;
+		justify-content: space-evenly;
+	}
+	.footer-bottom__wrapper {
+		justify-content: space-between;
+	}
+}
+
+/* Медиа запрос для экранов до 992px */
+@media (max-width: 992px) {
+	.partners__swiper-slide img {
+		max-width: 170px;
+	}
+	.product {
+		grid-template-columns: repeat(1, auto);
+		margin-bottom: 70px;
+	}
+	.catalog {
+		&__item {
+			font-size: 44px;
+		}
+		&__item--1 {
+			height: 250px;
+		}
+		&__item--2 {
+			height: 400px;
+		}
+		&__item--3 {
+			height: 160px;
+		}
+		&__item--4 {
+			height: 222px;
+		}
+		&__item--5 {
+			height: 212px;
+		}
+		&__item--6 {
+			height: 172px;
+		}
+	}
+	.presentation__item {
+		margin-left: 35px;
+		padding: 25px;
+		max-width: 297px;
+		width: 100%;
+	}
+
+	.mountain {
+		&__wrapper {
+			flex-wrap: wrap;
+		}
+		&__title {
+			margin-bottom: 50px;
+		}
+	}
+	.mountain-card {
+		margin: 0 auto;
+		padding-right: 0px;
+		margin-bottom: 50px;
+		&__item {
+			padding: 30px;
+		}
+	}
+	.mountain-about {
+		max-width: 620px;
+		margin: 0 auto;
+		min-height: 430px;
+		&__img {
+			height: 310px;
+			margin-bottom: 30px;
+		}
+		&__text {
+			margin-bottom: 30px;
+		}
+	}
+	.map {
+		&__info {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			align-items: center;
+			justify-items: center;
+			gap: 10px;
+		}
+		&__link {
+			min-width: 228px;
+		}
+	}
+	.footer-bottom {
+		padding-top: 80px;
+		&__wrapper {
+			flex-wrap: wrap;
+			flex-direction: column-reverse;
+		}
+		&__inner {
+			width: 100%;
+			justify-content: space-between;
+			margin-bottom: 40px;
+		}
+		&__logo-box {
+			display: flex;
+			justify-content: space-between;
+			max-width: 100%;
+			margin-right: 0;
+			max-width: 100%;
+		}
+		&__logo-text {
+			margin-top: 0;
+			max-width: 350px;
+		}
+	}
+}
+
+/* Медиа запрос для экранов до 768px */
+@media (max-width: 768px) {
+	.partners {
+		max-height: 140px;
+		margin-top: 481px;
+	}
+	.partners__swiper-slide img {
+		max-width: 130px;
+	}
+	/* Уменьшаем размер шрифта */
+	body {
+		font-size: 14px;
+	}
+
+	/* Стили для заголовка в top-header */
+	.top-header {
+		&__title {
+			font-size: 80px;
+		}
+
+		&__text {
+			font-size: 14px;
+			max-width: 400px;
+		}
+
+		/* Стиль для box в top-header */
+		&__box {
+			max-height: 160px;
+			padding: 26px 85px;
+		}
+	}
+
+	/* Стиль для активных пульсирующих точек слайдера */
+	.swiper-pagination-bullet-active {
+		width: 10px;
+		height: 10px;
+	}
+	.catalog {
+		padding-top: 100px;
+		&__item--2 {
+			height: 250px;
+		}
+		&__list {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-areas:
+				'header header'
+				'bar bar'
+				'content1 content3'
+				'content2 content4';
+		}
+	}
+	.catalog-info__title {
+		font-size: 44px;
+	}
+	.presentation__list {
+		justify-content: center;
+	}
+	.presentation__item {
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: 275px;
+		width: 100%;
+	}
+	.advantages {
+		padding: 125px 0;
+	}
+	.advantages__item {
+		padding: 22px 37px 24px 24px;
+		height: 225px;
+	}
+	.equipment-swiper__slide {
+		height: 365px;
+	}
+	.map {
+		&__marker {
+			width: 78px !important;
+		}
+	}
+	.form__box {
+		display: block;
+	}
+	.form__input {
+		margin: 0 0 16px 0;
+	}
+	.footer-top {
+		background-image: none;
+	}
+	.footer-bottom__inner {
+		margin-top: 40px;
+	}
+}
+
+/* Медиазапрос для экранов до 576px */
+@media (max-width: 576px) {
+	.header {
+		.container {
+			padding: 0;
+		}
+	}
+	/* Размер для текста в top-header */
+	.top-header__box {
+		font-size: 12px;
+		max-height: 130px;
+	}
+
+	/* Центрируем контент */
+	.top-header__content-inner {
+		margin: 0 auto;
+	}
+
+	/* Логотип для маленьких экранов */
+	.logo__img {
+		width: 65px;
+		height: 35px;
+	}
+
+	/* Меню для маленьких экранов */
+	.menu__box {
+		min-height: calc(100vh + 70px);
+		overflow: auto;
+		width: 100%;
+		right: 150%;
+	}
+
+	/* Размер шрифта для заголовка в top-header */
+	.top-header__title {
+		font-size: 50px;
+	}
+
+	/* Стиль для кнопки */
+	.button {
+		width: 130px;
+	}
+
+	.partners {
+		margin-top: 390px;
+	}
+	.product {
+		&__btn {
+			width: 100%;
+		}
+		&__item {
+			width: 273px;
+			height: 316px;
+		}
+		&__inner-btn {
+			width: 273px;
+		}
+		&__text {
+			font-size: 12px;
+		}
+	}
+	.catalog {
+		&__title {
+			font-size: 55px;
+			margin-bottom: 55px;
+		}
+		&__list {
+			gap: 8px;
+			margin-bottom: 48px;
+		}
+		&__item {
+			font-size: 30px;
+		}
+		&__item--1 {
+			height: 130px;
+		}
+		&__item--2 {
+			height: 130px;
+		}
+		&__item--3 {
+			height: 130px;
+		}
+		&__item--4 {
+			height: 130px;
+			transform: translateY(0);
+		}
+		&__item--5 {
+			height: 130px;
+		}
+		&__item--6 {
+			height: 130px;
+		}
+		&-info {
+			flex-wrap: wrap;
+			&__title {
+				margin-bottom: 30px;
+			}
+		}
+	}
+	.presentation__title {
+		max-width: 300px;
+		width: 100%;
+	}
+	.presentation__item {
+		padding: 0 0 25px 0;
+		max-width: 300px;
+	}
+	.presentation #custom-player {
+		height: 260px;
+	}
+	.presentation__img {
+		height: 96%;
+	}
+	.product {
+		padding: 0;
+	}
+	.best__title {
+		margin-bottom: 32px;
+		font-size: 55px;
+	}
+	.mountain-card {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.mountain-card__item {
+		max-width: 100%;
+	}
+	.mountain-about__img {
+		height: 218px;
+	}
+	.advantages__list {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.advantages__title {
+		font-size: 50px;
+	}
+	.advantages__img {
+		display: none;
+	}
+	.advantages__item {
+		padding: 10px 28px 15px 15px;
+		height: 150px;
+	}
+	.equipment {
+		padding: 40px 0;
+		&__title {
+			font-size: 48px;
+			margin-bottom: 40px;
+		}
+	}
+
+	.equipment-swiper {
+		margin-bottom: 32px;
+		&__slide {
+			width: calc(100% - 40px);
+			padding: 16px;
+			height: auto;
+		}
+		&__img {
+			height: 350px;
+		}
+		&__text {
+			font-size: 16px;
+		}
+	}
+
+	.equipment__link {
+		font-size: 10px;
+	}
+
+	.equipment-swiper__button {
+		width: 36px;
+		height: 36px;
+	}
+
+	.equipment-swiper__arrow-svg {
+		width: 12px;
+		height: 20px;
+	}
+	.reviews__title {
+		font-size: 50px;
+	}
+	.map__info {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 30px;
+	}
+	.map__title {
+		font-size: 50px;
+	}
+	.footer-top__title {
+		font-size: 35px;
+	}
+	.footer {
+		.button {
+			width: 100%;
+		}
+	}
+	.footer-bottom__inner {
+		display: block;
+	}
+	.footer-bottom__logo-box {
+		flex-wrap: wrap;
+	}
+	.footer-bottom__logo-text {
+		margin-top: 31px;
+	}
+	.footer-bottom__client {
+		margin: 40px 0;
+	}
+	.footer-bottom__agreement {
+		flex-wrap: wrap;
+		display: flex;
+	}
+	.form__checkbox-text {
+		font-size: 10px;
+	}
+	.form__input {
+		max-width: 100%;
+	}
+
+	/* Выпадающей список */
+	.footer-bottom__catalog-list,
+	.footer-bottom__client-list {
+		display: none;
+	}
+
+	.show {
+		display: block;
+	}
+
+	.footer-bottom__title--script {
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			background-image: url('../images/icons/arrow-down.svg');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 30px;
+			height: 30px;
+			color: red;
+			top: 50%; // Выравнивание по вертикали
+			transform: translateY(-50%); // Центрирование по вертикали
+		}
+	}
+}
+
+/* Стиль для экранов более 1200px */
+@media (min-width: 1400px) {
+	/* Скрываем некоторые элементы */
+	.logo--hidden,
+	.dropdown-list {
+		display: none;
+	}
+}

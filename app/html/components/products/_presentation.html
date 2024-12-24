@@ -1,0 +1,38 @@
+<section class="presentation">
+  <div class="presentation__video">
+    <img class="presentation__img" src="images/cover.jpg" alt="Обложка видео">
+    <video id="custom-player" width="100%" height="600" controls>
+      <source src="video/video.webm" type="video/webm">
+      Ваш браузер не поддерживает видео.
+    </video>
+    <div id="progress-container">
+      <input type="range" id="progress-bar" value="0" step="0.1" min="0" max="100">
+    </div>
+    <button class="presentation__play presentation__btn" id="custom-play"><img src="images/icons/play.svg"
+        alt=""></button>
+    <button class="presentation__pause presentation__btn" id="custom-pause" style="display: none;"><img src=""
+        alt=""></button>
+  </div>
+  <div class="container">
+
+    <ul class="presentation__list">
+      <li class="presentation__item">
+        <h4 class="presentation__title presentation__title--brand">Европейские бренды</h4>
+        <p class="presentation__text">Представляем десятки европейских брендов</p>
+      </li>
+      <li class="presentation__item">
+        <h4 class="presentation__title presentation__title--guarantee">Вечная гарантия</h4>
+        <p class="presentation__text">На некоторые бренды предоставляем пожизненную гарантию</p>
+      </li>
+      <li class="presentation__item">
+        <h4 class="presentation__title presentation__title--customization">Предпродажная настройка</h4>
+        <p class="presentation__text">Специалисты настроят ваш велосипед наилучшим <br> образом</p>
+      </li>
+      <li class="presentation__item">
+        <h4 class="presentation__title presentation__title--delivery">Доставка за 24 часа</h4>
+        <p class="presentation__text">Доставляем товар всеми популярными транспортными компаниями</p>
+      </li>
+    </ul>
+
+  </div>
+</section>

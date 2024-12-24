@@ -39,7 +39,8 @@
 			line-height: 160%;
 		}
 		padding: 16px 10px 16px 10px;
-		width: 346px;
+		max-width: 346px;
+		width: 100%;
 		height: 46px;
 		margin-right: 16px;
 	}
@@ -93,13 +94,13 @@
 .form__checkbox:checked + .form__checkbox-mark::after {
 	content: '';
 	position: absolute;
-	top: 6px;
+	top: 50%;
 	left: 9px;
 	width: 6px;
 	height: 10px;
 	border: solid white;
 	border-width: 0 3px 3px 0;
-	transform: rotate(45deg);
+	transform: translateY(-50%) rotate(45deg);
 }
 
 /* footer-bottom */
@@ -192,4 +193,14 @@
 .footer-bottom__client-item:not(:last-child),
 .footer-bottom__catalog-item:not(:last-child) {
 	margin-bottom: 16px;
+}
+
+.footer-bottom__catalog-link,
+.footer-bottom__client-link {
+	padding: 15px;
+	transition: color 0.3s;
+}
+.footer-bottom__catalog-link:hover,
+.footer-bottom__client-link:hover {
+	color: red;
 }

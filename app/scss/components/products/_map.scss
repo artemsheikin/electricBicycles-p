@@ -1,0 +1,67 @@
+.map {
+	padding-bottom: 60px;
+	background-color: $white;
+	&__title {
+		color: $bg;
+		font-family: 'BebasNeue';
+		font-size: 64px;
+		font-weight: 400;
+		line-height: 123%;
+		margin-bottom: 80px;
+	}
+	&__container {
+		margin: 0 auto;
+		max-width: 1920px;
+		margin-bottom: 40px;
+	}
+	&__info {
+		color: $bg;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__item {
+		max-width: 228px;
+	}
+	&__link {
+		display: inline-block;
+		width: 100%;
+		padding-left: 48px;
+		position: relative;
+		transition: all 0.3s ease;
+		&--navigation::after,
+		&--mail::after,
+		&--calendar::after,
+		&--tel::after {
+			content: '';
+			background-image: url('../images/icons/smartphone.svg');
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 32px;
+			height: 32px;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		&--navigation::after {
+			content: '';
+			background-image: url('../images/icons/navigation-orange.svg');
+		}
+		&--mail::after {
+			content: '';
+			background-image: url('../images/icons/mail-orange.svg');
+		}
+		&--calendar::after {
+			content: '';
+			background-image: url('../images/icons/calendar.svg');
+		}
+		&:hover,
+		&:active,
+		&:focus {
+			color: #f57520;
+		}
+
+		&:focus {
+			box-shadow: 0 0 5px #f57520;
+		}
+	}
+}

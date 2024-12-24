@@ -1,0 +1,29 @@
+.partners {
+	margin-top: 212px;
+	position: relative;
+	height: 320px;
+	width: 100%;
+	background: $white;
+	padding: 0;
+}
+
+.partners__swiper {
+	width: 100%;
+	height: 100%;
+	overflow: hidden; /* Скрывает лишний контент за пределами контейнера */
+}
+
+.partners__swiper-slide {
+	background: #ffffff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 0;
+}
+
+.partners__swiper-slide img {
+	display: block;
+	width: 233px;
+	height: 75px;
+	object-fit: contain;
+}

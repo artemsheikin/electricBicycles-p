@@ -34,4 +34,11 @@ body {
 	font-family: Inter;
 	font-weight: 500;
 	line-height: 123%;
+	transition: all 0.3s;
+	&:hover {
+		background-color: #f57f2a;
+	}
+	&:active {
+		background-color: #e1610c;
+	}
 }
